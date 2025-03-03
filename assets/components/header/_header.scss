@@ -1,20 +1,67 @@
 .header {
+	padding-top: 40px;
 	width: 100%;
-	background-color: var(--bg-color);
+	background-color: var(--light-color);
 
 	&__container {
 		display: flex;
 		align-items: center;
-		justify-content: space-between;
+		justify-content: center;
 		margin: 0 auto;
-		padding: 10px 15px;
+		padding: 0 15px;
+		width: 100%;
 		min-height: 70px;
 		max-width: $container-width + px;
+	}
+
+	&__wrap {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		width: 100%;
+		max-width: 1280px;
 	}
 
 	&__logo {
 		z-index: 5;
 		display: block;
+		line-height: 0;
+	}
+
+	&__content {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+	}
+
+	&__language {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		margin-right: 15px;
+		width: 60px;
+	}
+
+	&__button {
+		font-weight: 500;
+		font-size: 18px;
+		line-height: 135%;
+		color: var(--gray-color);
+		transition: color 0.4s;
+
+		&:hover {
+			color: var(--royal-blue-color);
+		}
+
+		&.active {
+			color: var(--royal-blue-color);
+		}
+	}
+
+	&__slash {
+		font-size: 18px;
+		line-height: 135%;
+		color: var(--gray-color);
 	}
 
 	&.fixed {
@@ -26,18 +73,20 @@
 }
 
 .logo__img {
-	width: 200px;
+	width: 100px;
 	height: auto;
 	fill: var(--light-color);
 }
 
 .menu {
+	margin-right: 95px;
+
 	&__burger {
 		display: none;
 	}
 
 	&__item {
-		margin-right: 20px;
+		margin-right: 25px;
 
 		&:last-child {
 			margin: 0;
@@ -45,30 +94,14 @@
 	}
 
 	&__link {
-		@include adaptive-font(18, 16);
 		position: relative;
-		color: var(--light-color);
-
-		&::after {
-			content: '';
-			position: absolute;
-			left: 50%;
-			bottom: -3px;
-			width: 0;
-			height: 2px;
-			background-color: currentcolor;
-			opacity: 0;
-			visibility: hidden;
-			transform: translateX(-50%);
-			transition: width 0.5s;
-		}
+		font-size: 18px;
+		line-height: 135%;
+		color: var(--gray-color);
+		transition: color 0.4s;
 
 		&:hover {
-			&::after {
-				width: 100%;
-				opacity: 1;
-				visibility: visible;
-			}
+			color: var(--royal-blue-color);
 		}
 	}
 }

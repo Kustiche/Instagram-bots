@@ -1,0 +1,12 @@
+.button {
+	border-radius: 15px;
+	padding: 15px 25px;
+	color: var(--light-color);
+	background-color: var(--royal-blue-color);
+	transition: all 0.4s;
+
+	&:hover {
+		color: var(--royal-blue-color);
+		background-color: var(--light-color);
+	}
+}
